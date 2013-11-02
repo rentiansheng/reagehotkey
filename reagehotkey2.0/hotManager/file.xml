@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <appliction>
+    <name>dd</name>
+    <path>dd</path>
+    <keys>dd</keys>
+    <guid></guid>
+  </appliction>
+  <appliction>
+    <name>ddd</name>
+    <path>ddd</path>
+    <keys>ddd</keys>
+    <guid></guid>
+  </appliction>
+  <appliction>
+    <name>dddd</name>
+    <path>dddd</path>
+    <keys>dddd</keys>
+    <guid> <![CDATA[]]></guid>
+  </appliction>
+  <clock>
+    <guid>7694d3b1-7afb-489d-9ce6-1c2c851a3719</guid>
+    <name>每天关机</name>
+    <time>23:13</time>
+    <data>Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</data>
+    <msg></msg>
+  </clock>
+</root>
