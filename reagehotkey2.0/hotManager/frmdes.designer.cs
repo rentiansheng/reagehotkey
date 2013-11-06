@@ -288,6 +288,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::hotManager.Properties.Resources.middle;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(404, 229);
             this.Controls.Add(this.statustool);
             this.Controls.Add(this.panel3);
@@ -296,9 +298,13 @@
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panDecrypt);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDes";
             this.Text = "Reage安全工具";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmDes_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmDes_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frmDes_MouseUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

@@ -23,6 +23,7 @@ namespace hotManager
                     if (runNow)
                     {
                         Application.Run(new frmTop());
+                        //Application.Run(new frmSetting (@"C:\Program Files\Renji\file.xml"));
                         //Application.Run(new  frmSetting(@"C:\Program Files\Renji\file.xml"));
                     }
                    

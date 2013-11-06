@@ -14,7 +14,7 @@ namespace hotManager
         public frmDes()
         {
             InitializeComponent();
-            this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\bg.png");
+            //this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\bg.png");
             this.BackgroundImageLayout = ImageLayout.Stretch;
             this.StartPosition = FormStartPosition.CenterScreen;
         }
@@ -121,6 +121,36 @@ namespace hotManager
         {
            // Application.Exit();
             this.Close();
+        }
+
+        bool ismove = false;
+        Point frmpoint = new Point();
+        private void frmDes_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ismove = true;
+                frmpoint.X -= e.X;
+                frmpoint.Y -= e.Y;
+            }
+        }
+
+        private void frmDes_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (ismove)
+            {
+                Point mouseoffset = Control.MousePosition;
+                mouseoffset.Offset(frmpoint .X , frmpoint .Y );
+                this.Location = mouseoffset;
+            }
+        }
+
+        private void frmDes_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ismove = false ;
+            }
         }
 
         

@@ -16,7 +16,7 @@ namespace hotManager
             InitializeComponent();
             this.path = path;
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\bg.png");
+           // this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\bg.png");
             this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
@@ -25,7 +25,7 @@ namespace hotManager
             InitializeComponent();
             this.path = path;
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\bg.png");
+            //this.BackgroundImage = Image.FromFile(Application.StartupPath + "\\bg.png");
             this.BackgroundImageLayout = ImageLayout.Stretch;
             shutdowntime = tmptime;
             if (null == tmptime || "" == tmptime.Trim())
@@ -37,6 +37,9 @@ namespace hotManager
         string strt = "";
         public bool loginout = false;
         public string shutdowntime = "";
+        const int  NO_MOVE  = 1;
+
+
         private void frmSetting_Load(object sender, EventArgs e)
         {
             this.Opacity = 0;
@@ -289,5 +292,44 @@ namespace hotManager
             }
             if (100f <= this.Opacity) this.timInit.Enabled = false; 
         }
+
+
+        bool ismove = false;
+        Point mousepoint = new Point  ();
+
+        private void frmSetting_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ismove = true;
+                mousepoint.X = -e.X;
+                mousepoint.Y = -e.Y;
+               
+            }
+        }
+
+        private void frmSetting_MouseUp(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons .Left )
+            ismove = false;
+        }
+
+        private void frmSetting_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (ismove)
+            {
+                Point mousePos = Control.MousePosition;
+                mousePos.Offset(mousepoint.X, mousepoint.Y);
+                this.Location = mousePos;
+
+            }
+        }
+
+        private void pboxclose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        
     }
 }

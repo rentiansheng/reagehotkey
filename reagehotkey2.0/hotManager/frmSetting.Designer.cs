@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnDel = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.txttime = new System.Windows.Forms.TextBox();
             this.lstvtime = new System.Windows.Forms.ListView();
@@ -60,15 +59,16 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statuslblmsg = new System.Windows.Forms.ToolStripStatusLabel();
             this.timInit = new System.Windows.Forms.Timer(this.components);
+            this.pboxclose = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxclose)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.btnDel);
             this.groupBox1.Controls.Add(this.btnEdit);
             this.groupBox1.Controls.Add(this.txttime);
             this.groupBox1.Controls.Add(this.lstvtime);
@@ -85,26 +85,16 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(31, 28);
+            this.groupBox1.Location = new System.Drawing.Point(31, 31);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(501, 175);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "关机设置";
             // 
-            // btnDel
-            // 
-            this.btnDel.Location = new System.Drawing.Point(277, 141);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(75, 23);
-            this.btnDel.TabIndex = 8;
-            this.btnDel.Text = "删除";
-            this.btnDel.UseVisualStyleBackColor = true;
-            this.btnDel.Visible = false;
-            // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(103, 141);
+            this.btnEdit.Location = new System.Drawing.Point(82, 146);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 7;
@@ -114,7 +104,7 @@
             // 
             // txttime
             // 
-            this.txttime.Location = new System.Drawing.Point(303, 37);
+            this.txttime.Location = new System.Drawing.Point(77, 38);
             this.txttime.MaxLength = 6;
             this.txttime.Name = "txttime";
             this.txttime.Size = new System.Drawing.Size(100, 21);
@@ -268,15 +258,17 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(78, 31);
+            this.txtName.Location = new System.Drawing.Point(285, 17);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(131, 21);
             this.txtName.TabIndex = 1;
+            this.txtName.Text = "默认计划";
+            this.txtName.Visible = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(232, 40);
+            this.label2.Location = new System.Drawing.Point(6, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 12);
             this.label2.TabIndex = 0;
@@ -294,11 +286,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 31);
+            this.label1.Location = new System.Drawing.Point(213, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 12);
             this.label1.TabIndex = 0;
             this.label1.Text = "计划名称：";
+            this.label1.Visible = false;
             // 
             // groupBox2
             // 
@@ -307,9 +300,9 @@
             this.groupBox2.Controls.Add(this.btnCancel);
             this.groupBox2.Controls.Add(this.btntmpset);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(39, 216);
+            this.groupBox2.Location = new System.Drawing.Point(31, 219);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(493, 100);
+            this.groupBox2.Size = new System.Drawing.Size(501, 100);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "临时关机计划";
@@ -327,7 +320,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(360, 42);
+            this.btnCancel.Location = new System.Drawing.Point(366, 40);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 7;
@@ -337,7 +330,7 @@
             // 
             // btntmpset
             // 
-            this.btntmpset.Location = new System.Drawing.Point(269, 40);
+            this.btntmpset.Location = new System.Drawing.Point(263, 40);
             this.btntmpset.Name = "btntmpset";
             this.btntmpset.Size = new System.Drawing.Size(75, 23);
             this.btntmpset.TabIndex = 7;
@@ -359,9 +352,9 @@
             this.statusStrip1.BackColor = System.Drawing.Color.Transparent;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statuslblmsg});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 339);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 357);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(596, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(570, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -375,11 +368,23 @@
             // 
             this.timInit.Tick += new System.EventHandler(this.timInit_Tick);
             // 
+            // pboxclose
+            // 
+            this.pboxclose.BackColor = System.Drawing.Color.Black;
+            this.pboxclose.Location = new System.Drawing.Point(530, 1);
+            this.pboxclose.Name = "pboxclose";
+            this.pboxclose.Size = new System.Drawing.Size(40, 24);
+            this.pboxclose.TabIndex = 3;
+            this.pboxclose.TabStop = false;
+            this.pboxclose.Click += new System.EventHandler(this.pboxclose_Click);
+            // 
             // frmSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 361);
+            this.BackgroundImage = global::hotManager.Properties.Resources.middle;
+            this.ClientSize = new System.Drawing.Size(570, 379);
+            this.Controls.Add(this.pboxclose);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -387,12 +392,16 @@
             this.Name = "frmSetting";
             this.Text = "任忌热键设置-关机设置";
             this.Load += new System.EventHandler(this.frmSetting_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmSetting_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmSetting_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frmSetting_MouseUp);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxclose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,7 +424,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txttime;
-        private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.ListView lstvtime;
         private System.Windows.Forms.ColumnHeader colGuid;
@@ -431,5 +439,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel statuslblmsg;
         private System.Windows.Forms.Timer timInit;
+        private System.Windows.Forms.PictureBox pboxclose;
     }
 }

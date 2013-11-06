@@ -172,7 +172,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmTop";
-            this.Opacity = 0.7D;
+            this.Opacity = 0.8D;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
