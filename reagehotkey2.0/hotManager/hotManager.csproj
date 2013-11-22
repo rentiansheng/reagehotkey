@@ -151,6 +151,7 @@
     <Content Include="file.xml">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Resources\close.png" />
     <None Include="middle.png" />
   </ItemGroup>
   <ItemGroup>

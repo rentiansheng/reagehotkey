@@ -370,10 +370,12 @@
             // 
             // pboxclose
             // 
-            this.pboxclose.BackColor = System.Drawing.Color.Black;
-            this.pboxclose.Location = new System.Drawing.Point(530, 1);
+            this.pboxclose.BackColor = System.Drawing.Color.Transparent;
+            this.pboxclose.Image = global::hotManager.Properties.Resources.close;
+            this.pboxclose.Location = new System.Drawing.Point(539, 1);
             this.pboxclose.Name = "pboxclose";
-            this.pboxclose.Size = new System.Drawing.Size(40, 24);
+            this.pboxclose.Size = new System.Drawing.Size(28, 24);
+            this.pboxclose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxclose.TabIndex = 3;
             this.pboxclose.TabStop = false;
             this.pboxclose.Click += new System.EventHandler(this.pboxclose_Click);

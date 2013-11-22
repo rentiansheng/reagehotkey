@@ -63,3 +63,7 @@ E:\code\owner\sai\hotManager\hotManager\obj\x86\Release\GenerateResource-ResGen.
 E:\code\owner\sai\hotManager\hotManager\obj\x86\Release\ResGen.read.1.tlog
 E:\code\owner\sai\hotManager\hotManager\obj\x86\Release\GenerateResource-ResGen.write.1.tlog
 E:\code\owner\sai\hotManager\hotManager\obj\x86\Release\ResGen.write.1.tlog
+D:\GitHub\reagehotkey\reagehotkey2.0\hotManager\obj\x86\Release\Interop.IWshRuntimeLibrary.dll
+D:\GitHub\reagehotkey\reagehotkey2.0\hotManager\obj\x86\Release\hotManager.csproj.ResolveComReference.cache
+D:\GitHub\reagehotkey\reagehotkey2.0\hotManager\obj\x86\Release\hotManager.exe
+D:\GitHub\reagehotkey\reagehotkey2.0\hotManager\obj\x86\Release\hotManager.pdb
